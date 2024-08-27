@@ -8,7 +8,14 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import axios from 'axios';
+import fajr from '../img/fajr-prayer.png';
+import dhuhr from '../img/dhhr-prayer-mosque.png';
+import asr from '../img/asr-prayer-mosque.png';
+import maghrib from '../img/sunset-prayer-mosque.png';
+import isha from '../img/night-prayer-mosque.png';
+
 import { useState , useEffect} from 'react';
+
 export default  function Prayer() {
     const [timings,setTiming] = useState( 
         {"Fajr": "04:22",
@@ -91,11 +98,11 @@ return city.apiName == event.target.value
   justifyContent="space-around"
   alignItems="flex-start"
   spacing={2}>
-    <Card title={"الفجر"} time={timings.Fajr} img={'../img/fajr-prayer.png'}/>
-    <Card title={'الظهر'} time={timings.Dhuhr} img={'../img/dhhr-prayer-mosque.png'}/>
-    <Card title={'العصر'} time={timings.Asr}  img={'../img/asr-prayer-mosque.png'}/>
-    <Card title={'المغرب'} time={timings.Maghrib}  img={'../img/sunset-prayer-mosque.png'}/>
-    <Card title={'المغرب'} time={timings.Isha}  img={'../img/night-prayer-mosque.png'}/>
+    <Card title={"الفجر"} time={timings.Fajr} img={fajr}/>
+    <Card title={'الظهر'} time={timings.Dhuhr} img={dhuhr}/>
+    <Card title={'العصر'} time={timings.Asr}  img={asr}/>
+    <Card title={'المغرب'} time={timings.Maghrib}  img={maghrib}/>
+    <Card title={'العشاء'} time={timings.Isha}  img={isha}/>
 
    
 </Stack>
